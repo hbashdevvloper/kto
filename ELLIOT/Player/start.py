@@ -8,7 +8,7 @@ from config import START_PIC, UPDATES_CHANNEL, GROUP_SUPPORT
 
 
 ALIVE_PIC = START_PIC
-HOME_TEXT = "👋🏻 **مرحبا [{}](tg://user?id={})** \n\n🤖 انا **ايــثــون**. \n**استطيع تشغيل الموسيقي, والراديو, Vc Raid, وفديوهات اليوتيوب & وايضا تشغيل فديوهات التلجرام والصوت **"
+HOME_TEXT = "👋🏻 **مرحبا [{}](tg://user?id={})** \n\n🤖 انا **كـتـو**. \n**استطيع تشغيل الموسيقي, والراديو, Vc Raid, وفديوهات اليوتيوب & وايضا تشغيل فديوهات التلجرام والصوت **"
 HELP_TEXT = """
 🏷️ **دليل الإعداد** :
 
@@ -28,7 +28,7 @@ USER_TEXT = """
 """
 
 SPAM_TEXT = """
-🏷️ **مساعده  @EITHON1** :
+🏷️ **مساعده ** :
 
 \u2022 /spam <Count> ضع رسالة االاسبام.
 \u2022 /fspam <Count> رسالة الاسبام.
@@ -36,9 +36,9 @@ SPAM_TEXT = """
 """
 
 RAID_TEXT = """
-🏷️ **اوامر الراديو @Confgat_EG** :
+🏷️ **اوامر الراديو ** :
 
-\u2022 /vcraid <chatid> - اعطاء سوزر الدردشه.
+\u2022 /vcraid <chatid> - اعطاء يوزر الدردشه.
 \u2022 /vraid <chatid + Reply To Video File> - راديو فيديو.
 \u2022 /raidpause - ايقاف الرديو.
 \u2022 /raidresume استئناف الرديو.
@@ -69,9 +69,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 InlineKeyboardButton("🗨️ سبام", callback_data="spam"),
             ],
             [
-                InlineKeyboardButton("🤖 مصنع بوتات", url="t.me/ML_EIBOT"),
-            ],
-            [
                 InlineKeyboardButton("🔙 رجوع", callback_data="home"),
                 InlineKeyboardButton("🤷 اغلاق", callback_data="close"),
             ]
@@ -95,9 +92,6 @@ async def cb_handler(client: Client, query: CallbackQuery):
             [
                 InlineKeyboardButton("💌 جروب الدعم", url=f"https://t.me/{GROUP_SUPPORT}"),
                 InlineKeyboardButton("🏷️ قناة السورس", url=f"https://t.me/{UPDATES_CHANNEL}"),
-            ],
-            [
-                InlineKeyboardButton("🤖 ايــثــون", url="https://t.me/EITHON1"),
             ],
             [
                 InlineKeyboardButton("🤔 المساعده & الاوامر", callback_data="help"),
@@ -194,9 +188,6 @@ async def start(client: Client, message: Message):
                 InlineKeyboardButton("🏷️ قناة السورس", url=f"https://t.me/{UPDATES_CHANNEL}"),
             ],
             [
-                InlineKeyboardButton("🤖 ايــثــون", url="https://t.me/EITHON1"),
-            ],
-            [
                 InlineKeyboardButton("🤔 المساعده & الاوامر", callback_data="help"),
             ]
             ]
@@ -215,9 +206,6 @@ async def help(client: Client, message: Message):
             [
                 InlineKeyboardButton("🤬 الراديو", callback_data="raid"),
                 InlineKeyboardButton("🗨️ اسبام", callback_data="spam"),
-            ],
-            [
-                InlineKeyboardButton("🤖 مصنع حمايه", url="t.me/ML_EIBOT"),
             ],
             [
                 InlineKeyboardButton("🔙 رجوع", callback_data="home"),
